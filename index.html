@@ -1,128 +1,32 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>浦江水晶园区投标方案 · 子系统导航</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #0f2b5b 0%, #1e4f8f 55%, #2b6cb0 100%);
-      min-height: 100vh;
-      color: #fff;
-      -webkit-font-smoothing: antialiased;
-    }
-    .bg-grid {
-      position: fixed; inset: 0; pointer-events: none; opacity: .06;
-      background-image: linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-    .wrap { position: relative; max-width: 1200px; margin: 0 auto; padding: 60px 32px 80px; }
-    .header { text-align: center; margin-bottom: 56px; }
-    .header .logo {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 84px; height: 84px; border-radius: 22px; margin-bottom: 24px;
-      background: linear-gradient(135deg, #67c3ff 0%, #3b82f6 100%);
-      box-shadow: 0 12px 32px rgba(0,0,0,.28);
-      font-size: 40px;
-    }
-    .header h1 { font-size: 34px; letter-spacing: 2px; font-weight: 700; }
-    .header .subtitle { margin-top: 14px; font-size: 15px; color: rgba(255,255,255,.78); letter-spacing: 1px; }
-    .header .line { width: 64px; height: 4px; border-radius: 2px; margin: 22px auto 0; background: linear-gradient(90deg, #67c3ff, #3b82f6); }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .card {
-      position: relative; display: block; text-decoration: none; color: #fff;
-      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px; padding: 30px 28px; overflow: hidden;
-      backdrop-filter: blur(8px); transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.35);
-      box-shadow: 0 18px 40px rgba(0,0,0,.3);
-    }
-    .card .num {
-      position: absolute; top: 20px; right: 24px; font-size: 46px; font-weight: 800;
-      color: rgba(255,255,255,.14); line-height: 1;
-    }
-    .card .icon {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 56px; height: 56px; border-radius: 14px; font-size: 28px; margin-bottom: 18px;
-      background: rgba(255,255,255,.14);
-    }
-    .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; letter-spacing: 1px; }
-    .card p { font-size: 13px; color: rgba(255,255,255,.72); line-height: 1.7; min-height: 44px; }
-    .card .enter { display: inline-block; margin-top: 16px; font-size: 13px; color: #9fd4ff; }
-    .card .enter::after { content: " →"; transition: transform .2s ease; display: inline-block; }
-    .card:hover .enter::after { transform: translateX(4px); }
-    .footer { margin-top: 64px; text-align: center; font-size: 13px; color: rgba(255,255,255,.5); letter-spacing: 1px; }
-    @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .header h1 { font-size: 26px; } }
-  </style>
-</head>
-<body>
-  <div class="bg-grid"></div>
-  <div class="wrap">
-    <div class="header">
-      <div class="logo">🏢</div>
-      <h1>浦江水晶园区投标方案</h1>
-      <div class="subtitle">数字孪生智慧园区 · 六大子系统统一入口</div>
-      <div class="line"></div>
-    </div>
-
-    <div class="grid">
-      <a class="card" href="./01/">
-        <span class="num">01</span>
-        <span class="icon">🖥️</span>
-        <h3>综合管理门户</h3>
-        <p>园区综合信息展示与统一工作台，聚合各业务入口，一屏纵览园区运行态势。</p>
-        <span class="enter">进入系统</span>
-      </a>
-
-      <a class="card" href="./02/">
-        <span class="num">02</span>
-        <span class="icon">🗂️</span>
-        <h3>园区档案管理</h3>
-        <p>企业档案、房产资源、设备信息、废渣量管理及党建管理等园区基础数据底座。</p>
-        <span class="enter">进入系统</span>
-      </a>
-
-      <a class="card" href="./03/">
-        <span class="num">03</span>
-        <span class="icon">⚙️</span>
-        <h3>园区运营管理</h3>
-        <p>停车管理、租金计费、物业工单等日常运营事务的在线化管理与调度。</p>
-        <span class="enter">进入系统</span>
-      </a>
-
-      <a class="card" href="./04/">
-        <span class="num">04</span>
-        <span class="icon">🤝</span>
-        <h3>企业一站式服务</h3>
-        <p>面向入园企业的政策申报、办事服务、诉求反馈等一站式在线服务平台。</p>
-        <span class="enter">进入系统</span>
-      </a>
-
-      <a class="card" href="./05/">
-        <span class="num">05</span>
-        <span class="icon">📊</span>
-        <h3>协同管控中心</h3>
-        <p>多部门协同与集中管控，实现园区安全、能耗、应急等主题的联动指挥。</p>
-        <span class="enter">进入系统</span>
-      </a>
-
-      <a class="card" href="./env/">
-        <span class="num">06</span>
-        <span class="icon">🌿</span>
-        <h3>环保一件事管理系统</h3>
-        <p>园区环保事项"一件事"集成办理，覆盖环保申报、监管、整改全流程。</p>
-        <span class="enter">进入系统</span>
-      </a>
-    </div>
-
-    <div class="footer">浦江水晶园区投标方案 · 独立子系统原型演示</div>
-  </div>
-</body>
-</html>
+<!DOCTYPE html><html lang=zh-CN><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=favicon.ico><title>浦江水晶园区综合管理平台</title><link href=static/css/chunk-00effc68.6a169d8c.css rel=prefetch><link href=static/css/chunk-02273cb5.c05952ec.css rel=prefetch><link href=static/css/chunk-0248e909.cb8de48c.css rel=prefetch><link href=static/css/chunk-070cc867.867abc05.css rel=prefetch><link href=static/css/chunk-0d96e6fb.6289407e.css rel=prefetch><link href=static/css/chunk-0f915316.08a6b749.css rel=prefetch><link href=static/css/chunk-13e22764.d8f65f59.css rel=prefetch><link href=static/css/chunk-16ed1b91.090d84ee.css rel=prefetch><link href=static/css/chunk-1dfee6ee.69a56e04.css rel=prefetch><link href=static/css/chunk-20f42948.7fd9d4ae.css rel=prefetch><link href=static/css/chunk-23d63e9c.2af247be.css rel=prefetch><link href=static/css/chunk-25672b96.3ad54660.css rel=prefetch><link href=static/css/chunk-2873b70f.4500b887.css rel=prefetch><link href=static/css/chunk-2a4a347b.b6371823.css rel=prefetch><link href=static/css/chunk-2aafcc75.cf91c222.css rel=prefetch><link href=static/css/chunk-2ab85d0a.28b5bcdd.css rel=prefetch><link href=static/css/chunk-2fd1f1fa.14c35e19.css rel=prefetch><link href=static/css/chunk-308d84d4.609997db.css rel=prefetch><link href=static/css/chunk-3159c64d.5d57fbbc.css rel=prefetch><link href=static/css/chunk-3214dfae.50e69e40.css rel=prefetch><link href=static/css/chunk-34c1b6aa.be763166.css rel=prefetch><link href=static/css/chunk-34fbc0a4.aa91bf9a.css rel=prefetch><link href=static/css/chunk-36f9628e.239a5200.css rel=prefetch><link href=static/css/chunk-3a533712.c956c546.css rel=prefetch><link href=static/css/chunk-3b746fa6.3f2b642b.css rel=prefetch><link href=static/css/chunk-3e1fe0ae.1dca8de2.css rel=prefetch><link href=static/css/chunk-44ecb5fc.05f4e4d9.css rel=prefetch><link href=static/css/chunk-4b9d1432.88f1c875.css rel=prefetch><link href=static/css/chunk-5349c935.da6936e0.css rel=prefetch><link href=static/css/chunk-545f2071.b65a9f5e.css rel=prefetch><link href=static/css/chunk-55814c44.fa2d93de.css rel=prefetch><link href=static/css/chunk-58257fb8.63757f37.css rel=prefetch><link href=static/css/chunk-5a1a60d6.ac7ed2e0.css rel=prefetch><link href=static/css/chunk-5b904740.22536d26.css rel=prefetch><link href=static/css/chunk-5c4ef86a.737993d0.css rel=prefetch><link href=static/css/chunk-5d910d44.66087ce1.css rel=prefetch><link href=static/css/chunk-5ffe10d2.15bda5c8.css rel=prefetch><link href=static/css/chunk-601bd668.92bca2a0.css rel=prefetch><link href=static/css/chunk-68422152.3e090290.css rel=prefetch><link href=static/css/chunk-6ad80472.6027e85b.css rel=prefetch><link href=static/css/chunk-6af6e060.cead8b84.css rel=prefetch><link href=static/css/chunk-6b58857a.cd3c5780.css rel=prefetch><link href=static/css/chunk-6dd03ce4.6aaef658.css rel=prefetch><link href=static/css/chunk-6e91b604.98d4901d.css rel=prefetch><link href=static/css/chunk-70d9c6b0.2fe117bb.css rel=prefetch><link href=static/css/chunk-718a1bdc.fc3100c5.css rel=prefetch><link href=static/css/chunk-71f0cabf.8f8a0511.css rel=prefetch><link href=static/css/chunk-72673580.3269f3fd.css rel=prefetch><link href=static/css/chunk-75814328.4d7dc69b.css rel=prefetch><link href=static/css/chunk-81916b5a.ef75b670.css rel=prefetch><link href=static/css/chunk-8281b522.0e2c619d.css rel=prefetch><link href=static/css/chunk-9710354a.7278c610.css rel=prefetch><link href=static/css/chunk-9787a4a6.7dee5606.css rel=prefetch><link href=static/css/chunk-9c8f5968.0cb162ac.css rel=prefetch><link href=static/css/chunk-a2d31772.e73059f8.css rel=prefetch><link href=static/css/chunk-a44ddd88.0e6664a9.css rel=prefetch><link href=static/css/chunk-bbbe80fe.0d92e9ac.css rel=prefetch><link href=static/css/chunk-cfb518fa.fb3fd508.css rel=prefetch><link href=static/css/chunk-d1add2e8.0a83f6c0.css rel=prefetch><link href=static/css/chunk-d29bdc74.42bd89e7.css rel=prefetch><link href=static/css/chunk-e833d104.635efb52.css rel=prefetch><link href=static/css/chunk-f99f1b8a.e67cc878.css rel=prefetch><link href=static/css/chunk-fec57856.65f08189.css rel=prefetch><link href=static/js/chunk-00effc68.adaf4300.js rel=prefetch><link href=static/js/chunk-02273cb5.aecd434f.js rel=prefetch><link href=static/js/chunk-0248e909.75651a3c.js rel=prefetch><link href=static/js/chunk-070cc867.bec616c2.js rel=prefetch><link href=static/js/chunk-0d96e6fb.a3039180.js rel=prefetch><link href=static/js/chunk-0f915316.9fc58a6f.js rel=prefetch><link href=static/js/chunk-13e22764.ca793d15.js rel=prefetch><link href=static/js/chunk-16ed1b91.563a52e8.js rel=prefetch><link href=static/js/chunk-1dfee6ee.359f779c.js rel=prefetch><link href=static/js/chunk-20f42948.90448b8c.js rel=prefetch><link href=static/js/chunk-23d63e9c.7d11c155.js rel=prefetch><link href=static/js/chunk-25672b96.8617d372.js rel=prefetch><link href=static/js/chunk-2873b70f.db75a5e8.js rel=prefetch><link href=static/js/chunk-2a4a347b.bc9fd2d8.js rel=prefetch><link href=static/js/chunk-2aafcc75.54caad63.js rel=prefetch><link href=static/js/chunk-2ab85d0a.68fb7a69.js rel=prefetch><link href=static/js/chunk-2d0c51b6.3b3cfa80.js rel=prefetch><link href=static/js/chunk-2d0efc83.0e8b3235.js rel=prefetch><link href=static/js/chunk-2d230fe7.7cb4ca41.js rel=prefetch><link href=static/js/chunk-2fd1f1fa.021515f0.js rel=prefetch><link href=static/js/chunk-308d84d4.4d72dc2b.js rel=prefetch><link href=static/js/chunk-3159c64d.f91f008f.js rel=prefetch><link href=static/js/chunk-3214dfae.07713605.js rel=prefetch><link href=static/js/chunk-34c1b6aa.bff30bbd.js rel=prefetch><link href=static/js/chunk-34fbc0a4.f5ae60a5.js rel=prefetch><link href=static/js/chunk-36f9628e.23362239.js rel=prefetch><link href=static/js/chunk-3a533712.e0f9a8b9.js rel=prefetch><link href=static/js/chunk-3b746fa6.7f934173.js rel=prefetch><link href=static/js/chunk-3e1fe0ae.2bd37129.js rel=prefetch><link href=static/js/chunk-44ecb5fc.b59bed61.js rel=prefetch><link href=static/js/chunk-4b9d1432.cb805609.js rel=prefetch><link href=static/js/chunk-5349c935.b95e8d93.js rel=prefetch><link href=static/js/chunk-545f2071.015013f8.js rel=prefetch><link href=static/js/chunk-55814c44.f44d72c9.js rel=prefetch><link href=static/js/chunk-58257fb8.99de97a6.js rel=prefetch><link href=static/js/chunk-5a1a60d6.06f90235.js rel=prefetch><link href=static/js/chunk-5b904740.883df363.js rel=prefetch><link href=static/js/chunk-5c4ef86a.1b877c57.js rel=prefetch><link href=static/js/chunk-5d910d44.d75c8350.js rel=prefetch><link href=static/js/chunk-5ffe10d2.4494c19d.js rel=prefetch><link href=static/js/chunk-601bd668.1fd63782.js rel=prefetch><link href=static/js/chunk-68422152.60a26289.js rel=prefetch><link href=static/js/chunk-6ad80472.0811abab.js rel=prefetch><link href=static/js/chunk-6af6e060.4b5f9adf.js rel=prefetch><link href=static/js/chunk-6b58857a.cd9b9080.js rel=prefetch><link href=static/js/chunk-6dd03ce4.708add75.js rel=prefetch><link href=static/js/chunk-6e91b604.1f392747.js rel=prefetch><link href=static/js/chunk-70d9c6b0.104006e8.js rel=prefetch><link href=static/js/chunk-718a1bdc.8f5bb8c5.js rel=prefetch><link href=static/js/chunk-71f0cabf.fb133100.js rel=prefetch><link href=static/js/chunk-7230224d.226b050f.js rel=prefetch><link href=static/js/chunk-72673580.933739e2.js rel=prefetch><link href=static/js/chunk-75814328.211f5779.js rel=prefetch><link href=static/js/chunk-81916b5a.b4e7cdf6.js rel=prefetch><link href=static/js/chunk-8281b522.83eaa637.js rel=prefetch><link href=static/js/chunk-920d84fc.52d33227.js rel=prefetch><link href=static/js/chunk-9710354a.6be00e32.js rel=prefetch><link href=static/js/chunk-9787a4a6.92f139d2.js rel=prefetch><link href=static/js/chunk-9c8f5968.df02802e.js rel=prefetch><link href=static/js/chunk-a2d31772.546100da.js rel=prefetch><link href=static/js/chunk-a44ddd88.d404fa03.js rel=prefetch><link href=static/js/chunk-bbbe80fe.2f7a4c37.js rel=prefetch><link href=static/js/chunk-cfb518fa.02e5207d.js rel=prefetch><link href=static/js/chunk-d1add2e8.982d35c3.js rel=prefetch><link href=static/js/chunk-d29bdc74.7199ec17.js rel=prefetch><link href=static/js/chunk-e833d104.8e3b18f8.js rel=prefetch><link href=static/js/chunk-f99f1b8a.95327be3.js rel=prefetch><link href=static/js/chunk-fec57856.120d295a.js rel=prefetch><link href=static/css/app.1e864c22.css rel=preload as=style><link href=static/css/chunk-vendors.5646d24e.css rel=preload as=style><link href=static/js/app.97241744.js rel=preload as=script><link href=static/js/chunk-vendors.d3cbf39b.js rel=preload as=script><link href=static/css/chunk-vendors.5646d24e.css rel=stylesheet><link href=static/css/app.1e864c22.css rel=stylesheet></head><body><noscript><strong>请启用 JavaScript 以获得最佳体验。</strong></noscript><div id=app></div><script>window.addEventListener('load', function() {
+      function fixPadding() {
+        var box = document.querySelector('.sidebar-container');
+        if (!box) return;
+        box.querySelectorAll('.el-menu > .el-submenu > .el-submenu__title').forEach(function(el) {
+          el.style.setProperty('padding-left', '33px', 'important');
+        });
+        box.querySelectorAll('.el-submenu .el-submenu .el-submenu__title').forEach(function(el) {
+          el.style.setProperty('padding-left', '60px', 'important');
+        });
+        box.querySelectorAll('.el-menu > .el-submenu > .el-menu > .el-menu-item').forEach(function(el) {
+          el.style.setProperty('padding-left', '60px', 'important');
+        });
+        box.querySelectorAll('.el-submenu .el-submenu .el-menu-item').forEach(function(el) {
+          el.style.setProperty('padding-left', '70px', 'important');
+        });
+        // 持续保持激活态菜单项的蓝色高亮
+        box.querySelectorAll('.el-menu-item').forEach(function(el) {
+          if (el.classList.contains('is-active')) {
+            el.style.setProperty('background-color', '#409EFF', 'important');
+            el.style.setProperty('color', '#ffffff', 'important');
+            el.style.setProperty('font-weight', '600', 'important');
+          } else {
+            el.style.removeProperty('background-color');
+            el.style.removeProperty('color');
+            el.style.removeProperty('font-weight');
+          }
+        });
+      }
+      // 每200ms持续修正，确保覆盖 Element UI 的行内样式
+      setInterval(fixPadding, 200);
+    });</script><script src=static/js/chunk-vendors.d3cbf39b.js></script><script src=static/js/app.97241744.js></script></body></html>
