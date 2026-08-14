@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang=zh-CN><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=favicon.ico><title>环保一件事管理系统</title><link href=static/css/app.090143e5.css rel=stylesheet></head><body><noscript><strong>请启用 JavaScript 以获得最佳体验。</strong></noscript><div id=app></div><script>window.addEventListener('load', function() {
+      function fixPadding() {
+        var box = document.querySelector('.sidebar-container');
+        if (!box) return;
+        box.querySelectorAll('.el-menu > .el-submenu > .el-submenu__title').forEach(function(el) {
+          el.style.setProperty('padding-left', '33px', 'important');
+        });
+        box.querySelectorAll('.el-submenu .el-submenu .el-submenu__title').forEach(function(el) {
+          el.style.setProperty('padding-left', '60px', 'important');
+        });
+        box.querySelectorAll('.el-menu > .el-submenu > .el-menu > .el-menu-item').forEach(function(el) {
+          el.style.setProperty('padding-left', '60px', 'important');
+        });
+        box.querySelectorAll('.el-submenu .el-submenu .el-menu-item').forEach(function(el) {
+          el.style.setProperty('padding-left', '70px', 'important');
+        });
+        // 持续保持激活态菜单项的蓝色高亮
+        box.querySelectorAll('.el-menu-item').forEach(function(el) {
+          if (el.classList.contains('is-active')) {
+            el.style.setProperty('background-color', '#409EFF', 'important');
+            el.style.setProperty('color', '#ffffff', 'important');
+            el.style.setProperty('font-weight', '600', 'important');
+          } else {
+            el.style.removeProperty('background-color');
+            el.style.removeProperty('color');
+            el.style.removeProperty('font-weight');
+          }
+        });
+      }
+      // 每200ms持续修正，确保覆盖 Element UI 的行内样式
+      setInterval(fixPadding, 200);
+    });</script><script src=static/js/app.efe50af7.js></script></body></html>

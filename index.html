@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>浦江水晶园区投标方案 · 子系统导航</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0f2b5b 0%, #1e4f8f 55%, #2b6cb0 100%);
+      min-height: 100vh;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bg-grid {
+      position: fixed; inset: 0; pointer-events: none; opacity: .06;
+      background-image: linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .wrap { position: relative; max-width: 1200px; margin: 0 auto; padding: 60px 32px 80px; }
+    .header { text-align: center; margin-bottom: 56px; }
+    .header .logo {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 84px; height: 84px; border-radius: 22px; margin-bottom: 24px;
+      background: linear-gradient(135deg, #67c3ff 0%, #3b82f6 100%);
+      box-shadow: 0 12px 32px rgba(0,0,0,.28);
+      font-size: 40px;
+    }
+    .header h1 { font-size: 34px; letter-spacing: 2px; font-weight: 700; }
+    .header .subtitle { margin-top: 14px; font-size: 15px; color: rgba(255,255,255,.78); letter-spacing: 1px; }
+    .header .line { width: 64px; height: 4px; border-radius: 2px; margin: 22px auto 0; background: linear-gradient(90deg, #67c3ff, #3b82f6); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .card {
+      position: relative; display: block; text-decoration: none; color: #fff;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 18px; padding: 30px 28px; overflow: hidden;
+      backdrop-filter: blur(8px); transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.35);
+      box-shadow: 0 18px 40px rgba(0,0,0,.3);
+    }
+    .card .num {
+      position: absolute; top: 20px; right: 24px; font-size: 46px; font-weight: 800;
+      color: rgba(255,255,255,.14); line-height: 1;
+    }
+    .card .icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 56px; height: 56px; border-radius: 14px; font-size: 28px; margin-bottom: 18px;
+      background: rgba(255,255,255,.14);
+    }
+    .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; letter-spacing: 1px; }
+    .card p { font-size: 13px; color: rgba(255,255,255,.72); line-height: 1.7; min-height: 44px; }
+    .card .enter { display: inline-block; margin-top: 16px; font-size: 13px; color: #9fd4ff; }
+    .card .enter::after { content: " →"; transition: transform .2s ease; display: inline-block; }
+    .card:hover .enter::after { transform: translateX(4px); }
+    .footer { margin-top: 64px; text-align: center; font-size: 13px; color: rgba(255,255,255,.5); letter-spacing: 1px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .header h1 { font-size: 26px; } }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="wrap">
+    <div class="header">
+      <div class="logo">🏢</div>
+      <h1>浦江水晶园区投标方案</h1>
+      <div class="subtitle">数字孪生智慧园区 · 六大子系统统一入口</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="./01/">
+        <span class="num">01</span>
+        <span class="icon">🖥️</span>
+        <h3>综合管理门户</h3>
+        <p>园区综合信息展示与统一工作台，聚合各业务入口，一屏纵览园区运行态势。</p>
+        <span class="enter">进入系统</span>
+      </a>
+
+      <a class="card" href="./02/">
+        <span class="num">02</span>
+        <span class="icon">🗂️</span>
+        <h3>园区档案管理</h3>
+        <p>企业档案、房产资源、设备信息、废渣量管理及党建管理等园区基础数据底座。</p>
+        <span class="enter">进入系统</span>
+      </a>
+
+      <a class="card" href="./03/">
+        <span class="num">03</span>
+        <span class="icon">⚙️</span>
+        <h3>园区运营管理</h3>
+        <p>停车管理、租金计费、物业工单等日常运营事务的在线化管理与调度。</p>
+        <span class="enter">进入系统</span>
+      </a>
+
+      <a class="card" href="./04/">
+        <span class="num">04</span>
+        <span class="icon">🤝</span>
+        <h3>企业一站式服务</h3>
+        <p>面向入园企业的政策申报、办事服务、诉求反馈等一站式在线服务平台。</p>
+        <span class="enter">进入系统</span>
+      </a>
+
+      <a class="card" href="./05/">
+        <span class="num">05</span>
+        <span class="icon">📊</span>
+        <h3>协同管控中心</h3>
+        <p>多部门协同与集中管控，实现园区安全、能耗、应急等主题的联动指挥。</p>
+        <span class="enter">进入系统</span>
+      </a>
+
+      <a class="card" href="./env/">
+        <span class="num">06</span>
+        <span class="icon">🌿</span>
+        <h3>环保一件事管理系统</h3>
+        <p>园区环保事项"一件事"集成办理，覆盖环保申报、监管、整改全流程。</p>
+        <span class="enter">进入系统</span>
+      </a>
+    </div>
+
+    <div class="footer">浦江水晶园区投标方案 · 独立子系统原型演示</div>
+  </div>
+</body>
+</html>
